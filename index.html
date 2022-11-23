@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+    <title>Codebreaker</title>
+</head>
+<body>
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <p>Break the hidden code by selecting colors from the left</p>
+            <p>Each guess will generate clues to guide your next guess</p>
+            <p>A red dot indicates one right color, right position</p>
+            <p>A black dot indicates one right color, wrong position</p>
+            <p>No feedback indicates no right colors in this guess</p>
+            <p>IMPORTANT! The clues do not correspond directly to the order of your guess!</p>
+        </div>
+    </div>
+    <div id="loseModal" class="modal-content" class="modal">
+        <span id="lxBtn">&times;</span>
+        <p>You failed to break the code.</p>
+        <p><em>hint: each guess can generate only one clue color</br>
+        hint: guessing double colors can give double clues</em></p>
+        <span id="tryAgainBtn">Try Again?</span>
+    </div>
+    <div id="winModal" class="modal-content" class="modal">
+        <span id="wxBtn">&times;</span>
+        <p>Congratulations! You broke the code!</p>
+        <span id="playAgainBtn">Play Again?</span>
+    </div>
+    <div class="parent-div">
+        <nav>
+            <button id="restartBtn">RESTART</button>
+            <button id="helpBtn">HELP</button>
+            <div id="cover">CODEBREA<span class="flipV">k</span>ER</div>
+            <div id="solution" class="code">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+        </nav>
+        <section class="gameboard">
+            <aside class="pieces">
+                <button id="button-black"></button>
+                <button id="button-blue"></button>
+                <button id="button-yellow"></button>
+                <button id="button-red"></button>
+                <button id="button-green"></button>
+                <button id="button-white"></button>
+            </aside>
+            <article class="guess-list">
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="guess">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+
+
+            </article>
+            <aside class="feedback-list">
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="feedback">
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+            </aside>
+        </section>
+        <footer class="footer"></footer>
+    </div>
+            
+</body>
+</html>
