@@ -52,7 +52,7 @@ body {
     width: 70%;
     height: 80px;
     margin-bottom: 10px;
-    font-size: 150%;
+    font-size: 200%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     justify-content: center;
     align-items: center;
@@ -62,7 +62,7 @@ body {
     display: none;
     background-color: blanchedalmond;
     border-radius: 10px;
-    width: 76.5%;
+    width: 70%;
     height: 80px;
     margin-left: 23.5%;
   }
@@ -73,8 +73,8 @@ body {
     align-items: center;
   }
   .parent-div {
-    /* background-color: lightblue; */
-    width: 70vw;
+    background-color: lightblue;
+    width: 90vw;
     padding-top: 20px;
     /* min-height: 70vh; */
   }
@@ -88,7 +88,7 @@ body {
   .pieces{
     width: 15%;
     min-height: 400px;
-    background-color: papayawhip;
+    /* background-color: papayawhip; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -208,12 +208,12 @@ body {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 40%;
-  top: 20%;
+  left: 10%;
+  top: 10%; */
   min-height: 50%;
-  width: 50%;
+  width: 70%;
   overflow: auto;
-  background-color: rgb (0,0,0,0.5);
+  background-color: rgb (0,0,0,0.5); 
 }
 .modal-content{
   background-color: lightgoldenrodyellow;
